@@ -30,7 +30,7 @@ function update() {
     // Create scene, camera, and render objects.
     scene = new THREE.Scene();
 scene.background = new THREE.CubeTextureLoader()
-					.setPath( 'gloom/' )
+					.setPath( 'assets/' )
 					.
 load( [ 'right.png', 'back.png', 'up.png', 'down.png', 'left.png', 'front.png' ] );
 	var material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: scene.background } );
