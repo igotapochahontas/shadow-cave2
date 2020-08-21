@@ -32,7 +32,7 @@ function update() {
 scene.background = new THREE.CubeTextureLoader()
 					.setPath( 'gloom/' )
 					.
-load( [ 'mbk.png', 'posx.jpg', 'mup.png', 'mdn.png', 'mlf.png', 'mrt.png' ] );
+load( [ 'mbk.png', 'mft.png', 'mup.png', 'mdn.png', 'mlf.png', 'mrt.png' ] );
 	var material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: scene.background } );
 
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
