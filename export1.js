@@ -11,10 +11,10 @@ var loader = new THREE.OBJLoader();
 // load a resource
 loader.load(
 	// resource URL
-	'assets/scaled.obj',
+	'assets/monster.obj',
 	// called when resource is loaded
 	function ( object ) {
-object.scale.set(20,20,20);
+object.scale.set(2,2,2);
 		scene.add( object );
 
 	},
@@ -37,7 +37,7 @@ object.scale.set(20,20,20);
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
-    'space': function() {
+    'monster': function() {
       objectitity();
     }
   };
