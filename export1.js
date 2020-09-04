@@ -1,6 +1,54 @@
 var scene, camera, renderer;
 
+
 function init() {
+
+
+function objectitity() {
+// instantiate a loader
+var loader = new THREE.OBJLoader();
+
+// load a resource
+loader.load(
+	// resource URL
+	'assets/scaled.obj',
+	// called when resource is loaded
+	function ( object ) {
+object.scale.set(20,20,20);
+		scene.add( object );
+
+	},
+	// called when loading is in progresses
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+
+}
+
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'space': function() {
+      objectitity();
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+
 var fftSize = 128;
 //var fftSize = 44100;
 const layer= new Audio();
